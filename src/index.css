@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-grid-line: rgba(0, 0, 0, 0.08);
+  --color-neo-yellow: #FFE600;
+  --color-neo-yellow-hover: #F2DA00;
+  --color-neo-blue: #0066FF;
+  --color-neo-orange: #FF5722;
+  --color-neo-pink: #FF2D55;
+  --color-neo-green: #00C853;
+  --color-neo-purple: #8E24AA;
+
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+html, body {
+  background-color: #FAFAFA;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Graph Paper Pattern Background */
+.bg-grid-paper {
+  background-color: #FAFAFA;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.07) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.bg-grid-paper-dense {
+  background-color: #FFFFFF;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.09) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.09) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Neo Brutalist Card Frames & Shadows */
+.brutal-card {
+  background-color: #FFFFFF;
+  border: 3.5px solid #000000;
+  border-radius: 28px;
+  box-shadow: 6px 6px 0px 0px #000000;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s ease;
+}
+
+.brutal-card:hover {
+  transform: translateY(-3px) translateX(-1px);
+  box-shadow: 8px 8px 0px 0px #000000;
+}
+
+.brutal-card-static {
+  background-color: #FFFFFF;
+  border: 3.5px solid #000000;
+  border-radius: 28px;
+  box-shadow: 6px 6px 0px 0px #000000;
+}
+
+/* Yellow Pill Badges matching reference photo */
+.pill-yellow {
+  background-color: #FFE600;
+  border: 2.5px solid #000000;
+  border-radius: 9999px;
+  padding: 4px 18px;
+  font-weight: 800;
+  color: #000000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 0px 0px #000000;
+}
+
+.pill-yellow-lg {
+  background-color: #FFE600;
+  border: 3px solid #000000;
+  border-radius: 9999px;
+  padding: 8px 28px;
+  font-weight: 900;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  color: #000000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 3px 3px 0px 0px #000000;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.pill-yellow-lg:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px 0px #000000;
+  background-color: #F5DC00;
+}
+
+/* Neo Buttons */
+.brutal-btn-yellow {
+  background-color: #FFE600;
+  color: #000000;
+  border: 3px solid #000000;
+  border-radius: 16px;
+  font-weight: 800;
+  box-shadow: 4px 4px 0px 0px #000000;
+  transition: all 0.15s ease;
+}
+.brutal-btn-yellow:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px #000000;
+  background-color: #F2DA00;
+}
+.brutal-btn-yellow:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px 0px #000000;
+}
+
+.brutal-btn-black {
+  background-color: #000000;
+  color: #FFFFFF;
+  border: 3px solid #000000;
+  border-radius: 16px;
+  font-weight: 800;
+  box-shadow: 4px 4px 0px 0px #FFE600;
+  transition: all 0.15s ease;
+}
+.brutal-btn-black:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px #FFE600;
+  background-color: #111111;
+}
+
+.brutal-btn-white {
+  background-color: #FFFFFF;
+  color: #000000;
+  border: 3px solid #000000;
+  border-radius: 16px;
+  font-weight: 800;
+  box-shadow: 4px 4px 0px 0px #000000;
+  transition: all 0.15s ease;
+}
+.brutal-btn-white:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px #000000;
+  background-color: #F8F9FA;
+}
+
+/* Animations */
+@keyframes doodleWiggle {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(-3deg) scale(1.02); }
+  75% { transform: rotate(3deg) scale(0.98); }
+}
+
+.animate-wiggle {
+  animation: doodleWiggle 4s ease-in-out infinite;
+}
+
+@keyframes doodleFloat {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(2deg); }
+}
+
+.animate-doodle-float {
+  animation: doodleFloat 3.5s ease-in-out infinite;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #FAFAFA; }
+::-webkit-scrollbar-thumb { background: #000000; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #FFE600; }
