@@ -29,27 +29,27 @@ const steps = [
 
 export default function HowItWorksSection() {
   return (
-    <section className="py-24 px-4 sm:px-6 md:px-12 lg:px-20 bg-grid-paper border-t-3 border-black relative overflow-hidden">
+    <section className="py-16 sm:py-24 px-4 sm:px-6 md:px-12 lg:px-20 bg-grid-paper border-t-3 border-black relative overflow-hidden">
       
       {/* Background Decor */}
       <div className="absolute top-10 right-10 hidden sm:block">
         <StarSparkle color="#0066FF" className="w-10 h-10" />
       </div>
 
-      <div className="max-w-7xl w-full mx-auto relative z-10 space-y-16">
+      <div className="max-w-7xl w-full mx-auto relative z-10 space-y-10 sm:space-y-16">
 
         {/* Header */}
-        <div className="text-center space-y-4 max-w-3xl mx-auto">
-          <span className="pill-yellow text-xs font-black tracking-widest uppercase">
+        <div className="text-center space-y-3 sm:space-y-4 max-w-3xl mx-auto">
+          <span className="pill-yellow text-[11px] sm:text-xs font-black tracking-widest uppercase">
             THE PROCESS
           </span>
-          <h2 className="text-3xl sm:text-5xl font-black font-display tracking-tight text-black leading-tight">
+          <h2 className="text-2xl sm:text-5xl font-black font-display tracking-tight text-black leading-tight">
             Get started in{" "}
-            <span className="inline-block bg-[#FFE600] text-black border-3 border-black rounded-2xl px-4 py-1 shadow-[4px_4px_0px_0px_#000] transform -rotate-1">
+            <span className="inline-block bg-[#FFE600] text-black border-2 sm:border-3 border-black rounded-xl sm:rounded-2xl px-2.5 sm:px-4 py-0.5 sm:py-1 shadow-[3px_3px_0px_0px_#000] sm:shadow-[4px_4px_0px_0px_#000] transform -rotate-1 mt-1 sm:mt-0">
               three simple steps.
             </span>
           </h2>
-          <p className="text-base sm:text-lg font-body font-medium text-black/80 max-w-xl mx-auto">
+          <p className="text-sm sm:text-lg font-body font-medium text-black/80 max-w-xl mx-auto">
             From joining our Discord space to receiving your first performance payout.
           </p>
         </div>
@@ -73,28 +73,28 @@ export default function HowItWorksSection() {
         </div>
 
         {/* Step Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-8 pt-2 sm:pt-4">
           {steps.map((step, i) => (
             <div
               key={i}
-              className="brutal-card bg-white p-6 flex flex-col justify-between space-y-6 relative group"
+              className="brutal-card bg-white p-5 sm:p-6 flex flex-col justify-between space-y-4 sm:space-y-6 relative group"
             >
               {/* Step Pill Header */}
               <div className="flex items-center justify-between">
-                <span className="text-3xl p-2.5 bg-[#FAFAFA] border-2 border-black rounded-2xl shadow-[3px_3px_0px_0px_#000]">
+                <span className="text-2xl sm:text-3xl p-2 sm:p-2.5 bg-[#FAFAFA] border-2 border-black rounded-2xl shadow-[2px_2px_0px_0px_#000] sm:shadow-[3px_3px_0px_0px_#000]">
                   {step.emoji}
                 </span>
-                <span className={`pill-yellow text-sm px-4 py-1 font-black shadow-[2px_2px_0px_0px_#000]`}>
+                <span className={`pill-yellow text-xs sm:text-sm px-3.5 sm:px-4 py-1 font-black shadow-[2px_2px_0px_0px_#000]`}>
                   {step.num}
                 </span>
               </div>
 
               {/* Step Copy */}
-              <div className="space-y-3">
-                <h3 className="text-2xl font-black font-display text-black">
+              <div className="space-y-2 sm:space-y-3">
+                <h3 className="text-xl sm:text-2xl font-black font-display text-black">
                   {step.title}
                 </h3>
-                <p className="text-sm font-body font-medium text-black/80 leading-relaxed">
+                <p className="text-xs sm:text-sm font-body font-medium text-black/80 leading-relaxed">
                   {step.desc}
                 </p>
               </div>

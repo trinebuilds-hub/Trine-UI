@@ -15,39 +15,39 @@ export default function ContactFooter() {
     <footer className="bg-grid-paper border-t-3 border-black">
 
       {/* Contact Section */}
-      <div className="py-20 px-4 sm:px-6 md:px-12 lg:px-20 relative overflow-hidden">
+      <div className="py-12 sm:py-20 px-4 sm:px-6 md:px-12 lg:px-20 relative overflow-hidden">
 
-        <div className="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start relative z-10">
+        <div className="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start relative z-10">
 
           {/* Left — Heading */}
-          <div className="lg:col-span-5 space-y-4">
-            <span className="pill-yellow text-xs font-black tracking-widest uppercase">
+          <div className="lg:col-span-5 space-y-3 sm:space-y-4">
+            <span className="pill-yellow text-[11px] sm:text-xs font-black tracking-widest uppercase">
               GET IN TOUCH
             </span>
-            <h2 className="text-4xl sm:text-5xl font-black font-display tracking-tight text-black">
+            <h2 className="text-3xl sm:text-5xl font-black font-display tracking-tight text-black">
               Let's talk.
             </h2>
-            <p className="text-black font-body font-medium max-w-md leading-relaxed">
+            <p className="text-sm sm:text-base text-black font-body font-medium max-w-md leading-relaxed">
               For brand inquiries, UGC partnerships, or creator support. We're always open to scaling new campaign collaborations.
             </p>
 
             {/* Decorative Brutalist Color Pills */}
-            <div className="flex gap-2 pt-4">
-              <div className="w-8 h-8 rounded-full bg-[#FFE600] border-2 border-black shadow-[2px_2px_0px_0px_#000]" />
-              <div className="w-8 h-8 rounded-full bg-[#0066FF] border-2 border-black shadow-[2px_2px_0px_0px_#000]" />
-              <div className="w-8 h-8 rounded-full bg-[#FF4081] border-2 border-black shadow-[2px_2px_0px_0px_#000]" />
+            <div className="flex gap-2 pt-2 sm:pt-4">
+              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#FFE600] border-2 border-black shadow-[2px_2px_0px_0px_#000]" />
+              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#0066FF] border-2 border-black shadow-[2px_2px_0px_0px_#000]" />
+              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#FF4081] border-2 border-black shadow-[2px_2px_0px_0px_#000]" />
             </div>
           </div>
 
           {/* Right — Contact Cards */}
-          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-4">
 
             <a
               href={`mailto:${CONFIG.EMAIL}`}
               id="contact-email"
-              className="brutal-card p-5 bg-white flex flex-col justify-between space-y-4 group hover:bg-[#FFE600] transition-colors"
+              className="brutal-card p-4 sm:p-5 bg-white flex flex-col justify-between space-y-3 sm:space-y-4 group hover:bg-[#FFE600] transition-colors"
             >
-              <div className="w-12 h-12 rounded-xl bg-black text-white flex items-center justify-center shadow-[3px_3px_0px_0px_#000]">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-black text-white flex items-center justify-center shadow-[2px_2px_0px_0px_#000] sm:shadow-[3px_3px_0px_0px_#000]">
                 <MailIcon />
               </div>
               <div>
@@ -59,9 +59,9 @@ export default function ContactFooter() {
             <a
               href={`tel:${CONFIG.PHONE}`}
               id="contact-phone"
-              className="brutal-card p-5 bg-white flex flex-col justify-between space-y-4 group hover:bg-[#00E676] transition-colors"
+              className="brutal-card p-4 sm:p-5 bg-white flex flex-col justify-between space-y-3 sm:space-y-4 group hover:bg-[#00E676] transition-colors"
             >
-              <div className="w-12 h-12 rounded-xl bg-black text-white flex items-center justify-center shadow-[3px_3px_0px_0px_#000]">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-black text-white flex items-center justify-center shadow-[2px_2px_0px_0px_#000] sm:shadow-[3px_3px_0px_0px_#000]">
                 <PhoneIcon />
               </div>
               <div>
@@ -75,9 +75,9 @@ export default function ContactFooter() {
               target="_blank"
               rel="noopener noreferrer"
               id="contact-instagram"
-              className="brutal-card p-5 bg-white flex flex-col justify-between space-y-4 group hover:bg-[#FF4081] group-hover:text-white transition-colors"
+              className="brutal-card p-4 sm:p-5 bg-white flex flex-col justify-between space-y-3 sm:space-y-4 group hover:bg-[#FF4081] group-hover:text-white transition-colors"
             >
-              <div className="w-12 h-12 rounded-xl bg-black text-white flex items-center justify-center shadow-[3px_3px_0px_0px_#000]">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-black text-white flex items-center justify-center shadow-[2px_2px_0px_0px_#000] sm:shadow-[3px_3px_0px_0px_#000]">
                 <InstagramIcon />
               </div>
               <div>
@@ -91,9 +91,9 @@ export default function ContactFooter() {
       </div>
 
       {/* Footer strip */}
-      <div className="border-t-3 border-black px-4 sm:px-6 md:px-12 lg:px-20 py-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs font-mono font-bold text-black bg-[#FFE600]">
+      <div className="border-t-3 border-black px-4 sm:px-6 md:px-12 lg:px-20 py-4 sm:py-6 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-2.5 sm:gap-3 text-[10px] sm:text-xs font-mono font-bold text-black bg-[#FFE600]">
         <p>© 2026 TRINEWORKS FX · trinewroks.space. All rights reserved.</p>
-        <p className="uppercase tracking-widest bg-black text-white px-3 py-1 rounded-full shadow-[2px_2px_0px_0px_#000]">
+        <p className="uppercase tracking-widest bg-black text-white px-2.5 sm:px-3 py-1 rounded-full shadow-[2px_2px_0px_0px_#000]">
           BUILT FOR CREATORS & PERFORMANCE BRANDS
         </p>
       </div>

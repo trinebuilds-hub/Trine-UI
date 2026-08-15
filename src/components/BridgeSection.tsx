@@ -9,7 +9,7 @@ const features = [
 
 export default function BridgeSection() {
   return (
-    <section className="relative py-24 px-4 sm:px-6 md:px-12 lg:px-20 bg-grid-paper border-t-3 border-black overflow-hidden">
+    <section className="relative py-16 sm:py-24 px-4 sm:px-6 md:px-12 lg:px-20 bg-grid-paper border-t-3 border-black overflow-hidden">
       
       {/* Decorative Stickers */}
       <div className="absolute top-8 left-10 hidden md:block">
@@ -19,54 +19,54 @@ export default function BridgeSection() {
         <PencilSticker className="w-24 h-24" />
       </div>
 
-      <div className="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center z-10 relative">
+      <div className="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center z-10 relative">
 
         {/* Left Column — Neo-Brutalist Frame Illustration */}
         <div className="lg:col-span-6 flex items-center justify-center order-2 lg:order-1 relative">
-          <div className="relative w-full max-w-lg brutal-card bg-white p-4 sm:p-6">
+          <div className="relative w-full max-w-lg brutal-card p-3.5 sm:p-6 bg-white">
             <img
               src="/bridge.jpg"
               alt="Trineworks FX connecting brands to creators"
-              className="w-full h-auto rounded-2xl border-2 border-black object-cover"
+              className="w-full h-auto rounded-xl sm:rounded-2xl border-2 border-black object-cover"
             />
             {/* Sticker overlay on bottom corner */}
             <div className="absolute -bottom-6 -left-6 z-20 hidden sm:block">
               <MagnifyingGlassSticker className="w-24 h-24" />
             </div>
             {/* Badge overlay on top right */}
-            <div className="absolute -top-4 -right-4 bg-[#FFE600] border-2 border-black px-4 py-2 rounded-xl shadow-[3px_3px_0px_0px_#000] font-black text-xs uppercase tracking-wider text-black">
+            <div className="absolute -top-3 right-2 sm:-top-4 sm:-right-4 bg-[#FFE600] border-2 border-black px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl shadow-[2px_2px_0px_0px_#000] sm:shadow-[3px_3px_0px_0px_#000] font-black text-[10px] sm:text-xs uppercase tracking-wider text-black">
               DIRECT DISCORD SPACE 🚀
             </div>
           </div>
         </div>
 
         {/* Right Column — Content */}
-        <div className="lg:col-span-6 flex flex-col items-start text-left space-y-6 order-1 lg:order-2">
+        <div className="lg:col-span-6 flex flex-col items-start text-left space-y-4 sm:space-y-6 order-1 lg:order-2">
 
-          <span className="pill-yellow text-xs font-black tracking-widest uppercase">
+          <span className="pill-yellow text-[11px] sm:text-xs font-black tracking-widest uppercase">
             WHY TRINEWORKS FX
           </span>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black font-display tracking-tight text-black leading-tight">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black font-display tracking-tight text-black leading-tight">
             We handle the brand side.{" "}
-            <span className="inline-block bg-[#0066FF] text-white border-3 border-black rounded-2xl px-3 py-1 shadow-[4px_4px_0px_0px_#000] transform rotate-1">
+            <span className="inline-block bg-[#0066FF] text-white border-2 sm:border-3 border-black rounded-xl sm:rounded-2xl px-2.5 sm:px-3 py-0.5 sm:py-1 shadow-[3px_3px_0px_0px_#000] sm:shadow-[4px_4px_0px_0px_#000] transform rotate-1 mt-1 sm:mt-0">
               You handle the creativity.
             </span>
           </h2>
 
-          <p className="text-base sm:text-lg text-black font-body font-medium leading-relaxed max-w-xl">
+          <p className="text-sm sm:text-lg text-black font-body font-medium leading-relaxed max-w-xl">
             Our team has built a private network of brand partnerships. We negotiate campaign contracts, bring them directly into our Discord space, and open them to creators like you.
           </p>
 
           {/* Feature Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full pt-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 w-full pt-1 sm:pt-2">
             {features.map((f, i) => (
               <div
                 key={i}
-                className="brutal-card p-4 bg-white flex flex-col justify-between space-y-2"
+                className="brutal-card p-3.5 sm:p-4 bg-white flex flex-col justify-between space-y-2"
               >
                 <div className="flex items-center gap-3">
-                  <span className="text-2xl p-2 bg-[#FFE600] border-2 border-black rounded-xl shadow-[2px_2px_0px_0px_#000]">
+                  <span className="text-xl sm:text-2xl p-1.5 sm:p-2 bg-[#FFE600] border-2 border-black rounded-xl shadow-[2px_2px_0px_0px_#000] flex-shrink-0">
                     {f.icon}
                   </span>
                   <span className="font-extrabold text-sm sm:text-base text-black font-display leading-snug">

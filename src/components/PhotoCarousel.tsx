@@ -49,45 +49,45 @@ export default function PhotoCarousel({ onExploreClick }: PhotoCarouselProps) {
     <div className="relative w-full max-w-xl mx-auto flex flex-col items-center select-none">
       {/* External Graph Paper Container Wrapper */}
       <div 
-        className="w-full bg-grid-paper-dense p-4 md:p-6 rounded-[36px] border-[3.5px] border-black shadow-[8px_8px_0px_0px_#000000] relative overflow-hidden"
+        className="w-full bg-grid-paper-dense p-3.5 sm:p-6 rounded-[28px] sm:rounded-[36px] border-[3px] sm:border-[3.5px] border-black shadow-[5px_5px_0px_0px_#000000] sm:shadow-[8px_8px_0px_0px_#000000] relative overflow-hidden"
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
         {/* Background Subtle Corner Accent */}
-        <div className="absolute top-2 right-4 text-[11px] font-mono font-extrabold text-black/40 tracking-wider">
+        <div className="absolute top-2 right-4 text-[10px] sm:text-[11px] font-mono font-extrabold text-black/40 tracking-wider">
           SLIDE 0{activeSlide + 1} / 0{totalSlides}
         </div>
 
         {/* Slide Stack Container */}
-        <div className="relative min-h-[460px] sm:min-h-[490px] flex items-center justify-center p-2">
+        <div className="relative min-h-[410px] sm:min-h-[490px] flex items-center justify-center p-1 sm:p-2">
           
           {/* SLIDE 01 — Photo 1 exact replica */}
           {activeSlide === 0 && (
-            <div className="w-full h-full brutal-card-static bg-white p-6 sm:p-8 flex flex-col justify-between items-center text-center relative animate-doodle-float">
+            <div className="w-full h-full brutal-card-static bg-white p-4 sm:p-8 flex flex-col justify-between items-center text-center relative animate-doodle-float">
               {/* Oval Pill Badge 01 */}
-              <div className="pt-2">
-                <span className="pill-yellow text-lg px-6 py-1 font-black">01</span>
+              <div className="pt-1 sm:pt-2">
+                <span className="pill-yellow text-base sm:text-lg px-4 sm:px-6 py-0.5 sm:py-1 font-black">01</span>
               </div>
 
               {/* OK Hand Doodle Top Right */}
-              <div className="absolute -top-5 -right-4 z-20 animate-wiggle">
-                <OkHandGesture className="w-20 h-20 sm:w-24 sm:h-24" />
+              <div className="absolute -top-4 -right-2 sm:-top-5 sm:-right-4 z-20 animate-wiggle">
+                <OkHandGesture className="w-14 h-14 sm:w-24 sm:h-24" />
               </div>
 
               {/* Main Heading matching photo 1 */}
-              <div className="my-auto py-6 px-2 max-w-md">
-                <h2 className="text-3xl sm:text-4xl md:text-[2.65rem] font-black font-display text-black leading-[1.12] tracking-tight">
+              <div className="my-auto py-4 sm:py-6 px-1 sm:px-2 max-w-md">
+                <h2 className="text-2xl sm:text-4xl md:text-[2.65rem] font-black font-display text-black leading-[1.2] sm:leading-[1.12] tracking-tight">
                   We are TRINEWORKS FX a <span className="underline decoration-wavy decoration-[#0066FF] underline-offset-4">digital/performance</span> marketing agency
                 </h2>
               </div>
 
               {/* Blue Squiggly Arrow Bottom Left */}
-              <div className="absolute -bottom-4 -left-6 z-20 pointer-events-none">
-                <BlueSquigglyArrow className="w-24 h-24 sm:w-28 sm:h-28" />
+              <div className="absolute -bottom-3 -left-2 sm:-bottom-4 sm:-left-6 z-20 pointer-events-none">
+                <BlueSquigglyArrow className="w-16 h-16 sm:w-28 sm:h-28" />
               </div>
 
               {/* SWIPE --> Bottom tag */}
-              <div className="pb-2 z-10">
+              <div className="pb-1 sm:pb-2 z-10">
                 <button
                   onClick={nextSlide}
                   className="text-xs sm:text-sm font-mono font-extrabold text-black hover:text-[#0066FF] tracking-widest uppercase transition-colors cursor-pointer flex items-center gap-2"
@@ -100,80 +100,80 @@ export default function PhotoCarousel({ onExploreClick }: PhotoCarouselProps) {
 
           {/* SLIDE 02 — Photo 2 exact replica */}
           {activeSlide === 1 && (
-            <div className="w-full h-full brutal-card-static bg-white p-6 sm:p-8 flex flex-col justify-between items-center text-center relative animate-doodle-float">
+            <div className="w-full h-full brutal-card-static bg-white p-4 sm:p-8 flex flex-col justify-between items-center text-center relative animate-doodle-float">
               {/* Orange Curved Arrow Top Left */}
               <div className="absolute top-2 left-2 z-20">
-                <OrangeCurvedArrow className="w-16 h-14" />
+                <OrangeCurvedArrow className="w-12 h-10 sm:w-16 sm:h-14" />
               </div>
 
               {/* Pencil Sticker Top Right */}
-              <div className="absolute -top-6 -right-6 z-20 animate-wiggle">
-                <PencilSticker className="w-24 h-24 sm:w-28 sm:h-28" />
+              <div className="absolute -top-4 -right-2 sm:-top-6 sm:-right-6 z-20 animate-wiggle">
+                <PencilSticker className="w-16 h-16 sm:w-28 sm:h-28" />
               </div>
 
               {/* Main Title matching photo 2 */}
-              <div className="my-auto py-8">
-                <h2 className="text-4xl sm:text-5xl md:text-6xl font-black font-display text-black tracking-tight mb-8">
+              <div className="my-auto py-6 sm:py-8">
+                <h2 className="text-3xl sm:text-5xl md:text-6xl font-black font-display text-black tracking-tight mb-5 sm:mb-8">
                   Who are we?
                 </h2>
 
                 {/* SWIPE Oval Pill Button */}
                 <button
                   onClick={nextSlide}
-                  className="pill-yellow-lg cursor-pointer transform hover:scale-105 active:scale-95 shadow-[4px_4px_0px_0px_#000]"
+                  className="pill-yellow-lg text-base sm:text-lg px-6 py-2 sm:px-7 sm:py-2.5 cursor-pointer transform hover:scale-105 active:scale-95 shadow-[3px_3px_0px_0px_#000] sm:shadow-[4px_4px_0px_0px_#000]"
                 >
                   SWIPE
                 </button>
               </div>
 
               {/* Magnifying Glass Sticker Bottom Left */}
-              <div className="absolute -bottom-6 -left-6 z-20">
-                <MagnifyingGlassSticker className="w-22 h-22 sm:w-26 sm:h-26" />
+              <div className="absolute -bottom-4 -left-2 sm:-bottom-6 sm:-left-6 z-20">
+                <MagnifyingGlassSticker className="w-16 h-16 sm:w-26 sm:h-26" />
               </div>
 
               {/* Pink Squiggly Arrow Bottom Right */}
-              <div className="absolute bottom-4 right-4 z-20">
-                <PinkSquigglyArrow className="w-16 h-16" />
+              <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 z-20">
+                <PinkSquigglyArrow className="w-12 h-12 sm:w-16 sm:h-16" />
               </div>
             </div>
           )}
 
           {/* SLIDE 03 — Photo 3 exact replica */}
           {activeSlide === 2 && (
-            <div className="w-full h-full brutal-card-static bg-white p-6 sm:p-8 flex flex-col justify-between items-center text-center relative animate-doodle-float">
+            <div className="w-full h-full brutal-card-static bg-white p-4 sm:p-8 flex flex-col justify-between items-center text-center relative animate-doodle-float">
               {/* Oval Pill Badge 02 */}
-              <div className="pt-2">
-                <span className="pill-yellow text-lg px-6 py-1 font-black">02</span>
+              <div className="pt-1 sm:pt-2">
+                <span className="pill-yellow text-base sm:text-lg px-4 sm:px-6 py-0.5 sm:py-1 font-black">02</span>
               </div>
 
               {/* Main Heading matching photo 3 */}
-              <div className="py-3">
-                <h2 className="text-3xl sm:text-4xl font-black font-display text-black tracking-tight">
+              <div className="py-2 sm:py-3">
+                <h2 className="text-2xl sm:text-4xl font-black font-display text-black tracking-tight">
                   What do we do?
                 </h2>
               </div>
 
               {/* Pink Pointer Arrow Left */}
-              <div className="absolute top-1/2 -left-6 -translate-y-1/2 z-20">
-                <PinkPointerArrow className="w-16 h-16 sm:w-20 sm:h-20" />
+              <div className="absolute top-1/2 -left-2 sm:-left-6 -translate-y-1/2 z-20 hidden xs:block">
+                <PinkPointerArrow className="w-12 h-12 sm:w-20 sm:h-20" />
               </div>
 
               {/* Yellow Squiggly Arrow Right */}
-              <div className="absolute top-1/3 -right-6 z-20">
-                <YellowSquigglyArrow className="w-20 h-20 sm:w-24 sm:h-24" />
+              <div className="absolute top-1/3 -right-2 sm:-right-6 z-20 hidden xs:block">
+                <YellowSquigglyArrow className="w-14 h-14 sm:w-24 sm:h-24" />
               </div>
 
               {/* 3 Text Paragraph Blocks matching photo 3 */}
-              <div className="space-y-4 my-auto px-2 sm:px-4 text-xs sm:text-sm font-body font-semibold text-black leading-relaxed">
-                <div className="p-3 bg-[#FAFAFA] border-2 border-black rounded-xl shadow-[3px_3px_0px_0px_#000]">
+              <div className="space-y-2.5 sm:space-y-4 my-auto px-1 sm:px-4 text-[11px] sm:text-sm font-body font-semibold text-black leading-relaxed">
+                <div className="p-2.5 sm:p-3 bg-[#FAFAFA] border-2 border-black rounded-xl shadow-[2px_2px_0px_0px_#000] sm:shadow-[3px_3px_0px_0px_#000]">
                   We help brands grow online through smart performance marketing strategies, creative content, and data-driven results.
                 </div>
 
-                <div className="p-3 bg-[#FAFAFA] border-2 border-black rounded-xl shadow-[3px_3px_0px_0px_#000]">
+                <div className="p-2.5 sm:p-3 bg-[#FAFAFA] border-2 border-black rounded-xl shadow-[2px_2px_0px_0px_#000] sm:shadow-[3px_3px_0px_0px_#000]">
                   We help brands generate leads and boost conversions through smart performance marketing.
                 </div>
 
-                <div className="p-3 bg-[#FAFAFA] border-2 border-black rounded-xl shadow-[3px_3px_0px_0px_#000]">
+                <div className="p-2.5 sm:p-3 bg-[#FAFAFA] border-2 border-black rounded-xl shadow-[2px_2px_0px_0px_#000] sm:shadow-[3px_3px_0px_0px_#000]">
                   We help your business stand out and get noticed online. We combine creativity and performance to scale your brand.
                 </div>
               </div>
@@ -192,7 +192,7 @@ export default function PhotoCarousel({ onExploreClick }: PhotoCarouselProps) {
 
           {/* SLIDE 04 — Value proposition for Creators & Brands */}
           {activeSlide === 3 && (
-            <div className="w-full h-full brutal-card-static bg-white p-6 sm:p-8 flex flex-col justify-between items-center text-center relative animate-doodle-float">
+            <div className="w-full h-full brutal-card-static bg-white p-4 sm:p-8 flex flex-col justify-between items-center text-center relative animate-doodle-float">
               {/* Tape Strip corner */}
               <div className="absolute -top-3 left-4 z-20">
                 <TapeStrip />
@@ -202,29 +202,29 @@ export default function PhotoCarousel({ onExploreClick }: PhotoCarouselProps) {
               </div>
 
               {/* Oval Pill Badge 03 */}
-              <div className="pt-2">
-                <span className="pill-yellow text-lg px-6 py-1 font-black">03</span>
+              <div className="pt-1 sm:pt-2">
+                <span className="pill-yellow text-base sm:text-lg px-4 sm:px-6 py-0.5 sm:py-1 font-black">03</span>
               </div>
 
               <div className="py-2">
-                <h2 className="text-3xl sm:text-4xl font-black font-display text-black tracking-tight">
+                <h2 className="text-2xl sm:text-4xl font-black font-display text-black tracking-tight">
                   Why Join TRINEWORKS FX?
                 </h2>
               </div>
 
-              <div className="space-y-3 my-auto px-2 sm:px-4 text-xs sm:text-sm font-body font-semibold text-black leading-relaxed">
-                <div className="p-3 bg-[#FFFDE7] border-2 border-black rounded-xl shadow-[3px_3px_0px_0px_#000] text-left flex items-center gap-3">
-                  <span className="text-2xl">🔥</span>
+              <div className="space-y-2.5 sm:space-y-3 my-auto px-1 sm:px-4 text-[11px] sm:text-sm font-body font-semibold text-black leading-relaxed">
+                <div className="p-2.5 sm:p-3 bg-[#FFFDE7] border-2 border-black rounded-xl shadow-[2px_2px_0px_0px_#000] sm:shadow-[3px_3px_0px_0px_#000] text-left flex items-center gap-2.5 sm:gap-3">
+                  <span className="text-xl sm:text-2xl flex-shrink-0">🔥</span>
                   <span><strong>Zero Client Chasing:</strong> Active brand briefs delivered straight into our Discord hub daily.</span>
                 </div>
 
-                <div className="p-3 bg-[#E8F5E9] border-2 border-black rounded-xl shadow-[3px_3px_0px_0px_#000] text-left flex items-center gap-3">
-                  <span className="text-2xl">📈</span>
+                <div className="p-2.5 sm:p-3 bg-[#E8F5E9] border-2 border-black rounded-xl shadow-[2px_2px_0px_0px_#000] sm:shadow-[3px_3px_0px_0px_#000] text-left flex items-center gap-2.5 sm:gap-3">
+                  <span className="text-xl sm:text-2xl flex-shrink-0">📈</span>
                   <span><strong>Performance Bonuses:</strong> Earn up to 1.5× payout multipliers as your UGC clips generate views.</span>
                 </div>
 
-                <div className="p-3 bg-[#E1F5FE] border-2 border-black rounded-xl shadow-[3px_3px_0px_0px_#000] text-left flex items-center gap-3">
-                  <span className="text-2xl">🎁</span>
+                <div className="p-2.5 sm:p-3 bg-[#E1F5FE] border-2 border-black rounded-xl shadow-[2px_2px_0px_0px_#000] sm:shadow-[3px_3px_0px_0px_#000] text-left flex items-center gap-2.5 sm:gap-3">
+                  <span className="text-xl sm:text-2xl flex-shrink-0">🎁</span>
                   <span><strong>VIP Product Drops:</strong> Free product seeding & direct brand sponsorships for top clippers.</span>
                 </div>
               </div>
@@ -233,7 +233,7 @@ export default function PhotoCarousel({ onExploreClick }: PhotoCarouselProps) {
                 {onExploreClick ? (
                   <button
                     onClick={onExploreClick}
-                    className="pill-yellow-lg text-sm cursor-pointer shadow-[3px_3px_0px_0px_#000]"
+                    className="pill-yellow-lg text-xs sm:text-sm px-5 py-2 sm:px-7 sm:py-2.5 cursor-pointer shadow-[3px_3px_0px_0px_#000]"
                   >
                     SEE CREATOR TIERS 🏆
                   </button>

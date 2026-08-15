@@ -24,21 +24,21 @@ export default function App() {
 
       {/* Neo-Brutalist Navbar */}
       <header className="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md border-b-3 border-black shadow-[0_4px_0px_0px_rgba(0,0,0,1)]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-18 flex items-center justify-between py-3">
+        <div className="max-w-7xl mx-auto px-3.5 sm:px-6 h-16 sm:h-18 flex items-center justify-between py-2 sm:py-3">
 
           {/* Logo */}
           <div
-            className="flex items-center space-x-3 cursor-pointer group"
+            className="flex items-center space-x-2.5 sm:space-x-3 cursor-pointer group"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
-            <div className="w-9 h-9 rounded-xl bg-[#FFE600] border-2 border-black flex items-center justify-center font-black text-black text-lg shadow-[2px_2px_0px_0px_#000] group-hover:translate-x-0.5 group-hover:translate-y-0.5 transition-transform">
+            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl bg-[#FFE600] border-2 border-black flex items-center justify-center font-black text-black text-base sm:text-lg shadow-[2px_2px_0px_0px_#000] group-hover:translate-x-0.5 group-hover:translate-y-0.5 transition-transform">
               T
             </div>
             <div className="flex flex-col">
-              <span className="font-display font-black text-lg sm:text-xl tracking-tight text-black leading-none">
-                TRINEWORKS <span className="bg-[#FFE600] border border-black px-1.5 py-0.5 rounded text-xs tracking-wide">FX</span>
+              <span className="font-display font-black text-base sm:text-xl tracking-tight text-black leading-none">
+                TRINEWORKS <span className="bg-[#FFE600] border border-black px-1 sm:px-1.5 py-0.5 rounded text-[10px] sm:text-xs tracking-wide">FX</span>
               </span>
-              <span className="text-[9px] font-mono font-extrabold tracking-widest text-black/60 uppercase mt-0.5">
+              <span className="text-[8px] sm:text-[9px] font-mono font-extrabold tracking-widest text-black/60 uppercase mt-0.5">
                 trinewroks.space
               </span>
             </div>
@@ -58,9 +58,10 @@ export default function App() {
             target="_blank"
             rel="noopener noreferrer"
             id="nav-discord-cta"
-            className="pill-yellow text-xs font-black tracking-wider uppercase shadow-[3px_3px_0px_0px_#000] hover:translate-x-[-1px] hover:translate-y-[-1px] cursor-pointer"
+            className="pill-yellow text-[11px] sm:text-xs px-3 sm:px-4.5 py-1.5 font-black tracking-wider uppercase shadow-[2px_2px_0px_0px_#000] sm:shadow-[3px_3px_0px_0px_#000] hover:translate-x-[-1px] hover:translate-y-[-1px] cursor-pointer"
           >
-            Join Discord Space
+            <span className="sm:hidden">Join Space</span>
+            <span className="hidden sm:inline">Join Discord Space</span>
           </a>
 
         </div>
