@@ -92,7 +92,7 @@ export default function ContactFooter() {
 
       {/* Footer strip */}
       <div className="border-t-3 border-black px-4 sm:px-6 md:px-12 lg:px-20 py-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs font-mono font-bold text-black bg-[#FFE600]">
-        <p>© 2026 TRINEWORKS FX. All rights reserved.</p>
+        <p>© 2026 TRINEWORKS FX · trinewroks.space. All rights reserved.</p>
         <p className="uppercase tracking-widest bg-black text-white px-3 py-1 rounded-full shadow-[2px_2px_0px_0px_#000]">
           BUILT FOR CREATORS & PERFORMANCE BRANDS
         </p>

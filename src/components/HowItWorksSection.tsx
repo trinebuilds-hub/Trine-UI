@@ -3,8 +3,8 @@ import { BlueSquigglyArrow, PinkPointerArrow, StarSparkle } from "./Doodles";
 const steps = [
   {
     num: "01",
-    title: "Join our Discord",
-    desc: "Get instant access to private brand campaign feeds and our exclusive creator community.",
+    title: "Join our Discord Space",
+    desc: "Get instant access to private brand campaign feeds in our creator space at trinewroks.space.",
     emoji: "💬",
     pillBg: "bg-[#FFE600]",
     badgeText: "STEP 01",
@@ -12,7 +12,7 @@ const steps = [
   {
     num: "02",
     title: "Claim a campaign",
-    desc: "Pick from available brand briefs and premium asset packs directly in our Discord channels.",
+    desc: "Pick from available brand briefs and premium asset packs directly in our Discord space.",
     emoji: "📋",
     pillBg: "bg-[#00E676]",
     badgeText: "STEP 02",
@@ -50,7 +50,7 @@ export default function HowItWorksSection() {
             </span>
           </h2>
           <p className="text-base sm:text-lg font-body font-medium text-black/80 max-w-xl mx-auto">
-            From joining our Discord to receiving your first performance payout.
+            From joining our Discord space to receiving your first performance payout.
           </p>
         </div>
 

@@ -34,9 +34,14 @@ export default function App() {
             <div className="w-9 h-9 rounded-xl bg-[#FFE600] border-2 border-black flex items-center justify-center font-black text-black text-lg shadow-[2px_2px_0px_0px_#000] group-hover:translate-x-0.5 group-hover:translate-y-0.5 transition-transform">
               T
             </div>
-            <span className="font-display font-black text-lg sm:text-xl tracking-tight text-black">
-              TRINEWORKS <span className="bg-[#FFE600] border border-black px-1.5 py-0.5 rounded text-xs tracking-wide">FX</span>
-            </span>
+            <div className="flex flex-col">
+              <span className="font-display font-black text-lg sm:text-xl tracking-tight text-black leading-none">
+                TRINEWORKS <span className="bg-[#FFE600] border border-black px-1.5 py-0.5 rounded text-xs tracking-wide">FX</span>
+              </span>
+              <span className="text-[9px] font-mono font-extrabold tracking-widest text-black/60 uppercase mt-0.5">
+                trinewroks.space
+              </span>
+            </div>
           </div>
 
           {/* Nav Links */}
@@ -55,7 +60,7 @@ export default function App() {
             id="nav-discord-cta"
             className="pill-yellow text-xs font-black tracking-wider uppercase shadow-[3px_3px_0px_0px_#000] hover:translate-x-[-1px] hover:translate-y-[-1px] cursor-pointer"
           >
-            Join Discord
+            Join Discord Space
           </a>
 
         </div>

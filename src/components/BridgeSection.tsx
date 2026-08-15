@@ -35,7 +35,7 @@ export default function BridgeSection() {
             </div>
             {/* Badge overlay on top right */}
             <div className="absolute -top-4 -right-4 bg-[#FFE600] border-2 border-black px-4 py-2 rounded-xl shadow-[3px_3px_0px_0px_#000] font-black text-xs uppercase tracking-wider text-black">
-              DIRECT DISCORD FEED 🚀
+              DIRECT DISCORD SPACE 🚀
             </div>
           </div>
         </div>
@@ -55,7 +55,7 @@ export default function BridgeSection() {
           </h2>
 
           <p className="text-base sm:text-lg text-black font-body font-medium leading-relaxed max-w-xl">
-            Our team has built a private network of brand partnerships. We negotiate campaign contracts, bring them directly into our Discord, and open them to creators like you.
+            Our team has built a private network of brand partnerships. We negotiate campaign contracts, bring them directly into our Discord space, and open them to creators like you.
           </p>
 
           {/* Feature Grid */}
